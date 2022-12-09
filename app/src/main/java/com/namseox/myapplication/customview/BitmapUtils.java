@@ -12,8 +12,9 @@ public class BitmapUtils {
     public BitmapUtils(Context context) {
         this.context = context;
     }
-    public Bitmap loadBitmap(int id) {
+    public Bitmap loadBitmap(int id,float width, float heigh) {
         Bitmap  bm = BitmapFactory.decodeResource(context.getResources(), id);
+        bm = Bitmap.createScaledBitmap(bm,(int) width,(int) heigh,true);
         if (bm == null) {
             System.out.println("load bitmap failed");
         }

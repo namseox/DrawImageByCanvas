@@ -14,7 +14,7 @@ public class GameDraw extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-      //  setupWindow();
+        setupWindow();
         setContentView(new CustomView(this));
 
     }
