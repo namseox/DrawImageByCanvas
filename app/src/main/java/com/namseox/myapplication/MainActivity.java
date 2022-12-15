@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         setupWindow();
 
         setContentView(R.layout.activity_main);
-        bindingView();
+//        bindingView();
         addHandleTouch();
     }
 
@@ -34,10 +34,7 @@ public class MainActivity extends AppCompatActivity {
         return super.onCreateView(parent, name, context, attrs);
     }
 
-    void bindingView() {
-        helloText = MainActivity.this.findViewById(R.id.hello_text);
-        count = MainActivity.this.findViewById(R.id.tv_count);
-    }
+
 
 
     void setupWindow() {
@@ -53,18 +50,18 @@ public class MainActivity extends AppCompatActivity {
         root.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
-                count.setText(java.time.LocalTime.now().toString());
+//                count.setText(java.time.LocalTime.now().toString());
                 switch (motionEvent.getAction()) {
                     case  MotionEvent.ACTION_UP:
-                        helloText.setText("TouchUP - x: " + motionEvent.getX() +", y: "+   motionEvent.getY());
+//                        helloText.setText("TouchUP - x: " + motionEvent.getX() +", y: "+   motionEvent.getY());
                         openGameDraw();
                         break;
-                    case MotionEvent.ACTION_DOWN:
-                        helloText.setText("TouchDOWN - x: " + motionEvent.getX() +", y: "+   motionEvent.getY());
-                        break;
-                    case MotionEvent.ACTION_MOVE:
-                        helloText.setText("TouchMove - x: " + motionEvent.getX() +", y: "+   motionEvent.getY());
-                        break;
+//                    case MotionEvent.ACTION_DOWN:
+//                        helloText.setText("TouchDOWN - x: " + motionEvent.getX() +", y: "+   motionEvent.getY());
+//                        break;
+//                    case MotionEvent.ACTION_MOVE:
+//                        helloText.setText("TouchMove - x: " + motionEvent.getX() +", y: "+   motionEvent.getY());
+//                        break;
                 }
                 return false;
             }
